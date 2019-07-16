@@ -1,0 +1,71 @@
+.container {
+    background-color: maroon;
+    border-radius: 10px;
+    width:90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: 720px;
+}
+.display {
+    background-color: rgb(65, 58, 58);
+    color: white;
+    width: 400px;
+    height: 80px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    color: white;
+    border-radius: 50px;
+    width:90px; 
+    height: 90px;
+    text-align: center;
+    margin: 5px 5px;
+    background-color:blue;
+    font-size: 30px;
+}
+
+
+.buttonsContainer {
+    width: 300px;
+    float:  left;
+}
+
+.SpecialButton {
+    background-color: rgb(118, 118, 235);
+    
+}
+
+.operatorButton{
+    background-color: rgb(118, 118, 235);
+    
+}
+
+.operatorContainer {
+    height: 500px;
+    width: 100px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    float:right;
+}
+
+.logo-container {
+    height: 50px;
+    width: 400px;
+}
+
+.logo {
+    margin: 20px 20px;
+}
+
+.App {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.zeroButton {
+    width: 180px;
+}
