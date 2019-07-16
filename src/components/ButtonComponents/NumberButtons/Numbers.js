@@ -5,7 +5,7 @@ import React, { useState } from "react";
 //Import your array data to from the provided data file
 import { numbers } from '../../../data';
 
-const Numbers = () => {
+const Numbers = (numbers) => {
   // STEP 2 - add the imported data to state
   const [numbersState, setNumbersState] = useState(numbers);
   return (
