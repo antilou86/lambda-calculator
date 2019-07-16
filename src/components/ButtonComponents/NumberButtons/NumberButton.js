@@ -9,7 +9,7 @@ const NumberButton = (props) => {
     </button> )
   } else {
   return (
-    <button className="zeroButton">
+    <button className="zeroButton" onClick={props.handleClick}>
       {props.num}
     </button>
   )};

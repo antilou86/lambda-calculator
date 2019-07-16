@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
@@ -25,7 +25,7 @@ function App() {
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
         <Display/>
         <div className="buttonsContainer">
-          <Specials />
+          <Specials/>
           <Numbers/>
         </div>
         <Operators/>
