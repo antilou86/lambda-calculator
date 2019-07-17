@@ -2,15 +2,17 @@ import React from "react";
 
 
 const NumberButton = (props) => {
+ const {num, handleNumClick} = props;
+
   if (props.num !== "0") {
-    return (<button>
+    return (<button onClick={() => handleNumClick(num)}>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
-      {props.num}
+      {num}
     </button> )
   } else {
   return (
-    <button className="zeroButton" onClick={props.handleClick}>
-      {props.num}
+    <button className="zeroButton" onClick={() => handleNumClick(num)}>
+      {num}
     </button>
   )};
 };

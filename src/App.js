@@ -13,22 +13,39 @@ import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
 
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
+  const [displayValue, setDisplayValue] = useState(' ');
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
-  // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
-  // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
-  // Don't forget to pass the functions (and any additional data needed) to the components as props
+  const handleNumClick = (value) => {
+    setDisplayValue(displayValue + value)
+  };
+
+  const handleOperatorClick = (value) => {
+    if (value === '=') { setDisplayValue(eval(displayValue))
+    } else { setDisplayValue(displayValue + ' ' + value)
+    }}
+
+  const handleSpecialClick = (value) => {
+    if (value === 'C') {
+    setDisplayValue(' ')
+    } else if (value === "+/-") {
+      setDisplayValue('-'+displayValue)
+    } else {
+      setDisplayValue(displayValue +' '+"%")
+    }
+  };
 
   return (
     <div className="container">
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <Display/>
+        <Display displayValue={displayValue}
+                 setDisplayValue={setDisplayValue} />
         <div className="buttonsContainer">
-          <Specials/>
-          <Numbers/>
+          <Specials handleSpecialClick={handleSpecialClick}/>
+          <Numbers handleNumClick={handleNumClick}/>
         </div>
-        <Operators/>
+        <Operators handleOperatorClick={handleOperatorClick}/>
       </div>
     </div>
   );

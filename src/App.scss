@@ -10,12 +10,17 @@
 .display {
     background-color: rgb(65, 58, 58);
     color: white;
-    width: 400px;
+    width: 380px;
     height: 100px;
     border-radius: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+
 }
 
 button {
